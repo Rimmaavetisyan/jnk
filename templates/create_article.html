@@ -1,0 +1,45 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Article</title>
+</head>
+<body>
+    <h1>Create a New Article</h1>
+    <form action="/create-article" method="post">
+        <input type="text" name="title" id="title" placeholder="Article Title" required>
+        <input type="text" name="intro" id="intro" placeholder="Introduction" required>
+        <textarea name="text" id="text" placeholder="Article Content" required></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>To-Do List</h1>
+
+    <!-- Form for adding a new task -->
+    <!-- <form action="{{ url_for('add_task') }}" method="POST">
+        <input type="text" name="title" id = "titile"placeholder="Task Title" required>
+        <input type="text" name="description" id="description" placeholder="Task Description">
+        <button type="submit" id="submit">Add Task</button>
+    </form> -->
+
+    <!-- Display tasks -->
+    <ul>
+        <form action="/add" method="post">
+            <input type="text" name="title"id="title" placeholder="Արտիկլի վերնագիր" required>
+            <textarea name="description" id="description" placeholder="Արտիկլի նկարագրություն" required></textarea>
+            <button type="submit" id="submit">Ներդնել</button>
+        </form>
+        
+</body>
+</html>
