@@ -25,7 +25,6 @@ class User(UserMixin, db.Model):
 class Task(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100), nullable=False)
-    description = db.Column(db.String(200), nullable=True)
     done = db.Column(db.Boolean, default=False)
 
     def __repr__(self):
@@ -49,13 +48,12 @@ def index():
 @login_required
 def add_task():
     title = request.form.get('title')
-    description = request.form.get('description', '')
 
     if not title:
         flash("Title is required!", "error")
         return redirect(url_for('index'))
 
-    new_task = Task(title=title, description=description)
+    new_task = Task(title=title)
     db.session.add(new_task)
     db.session.commit()
     flash("Task added successfully!", "success")
