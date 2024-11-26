@@ -5,8 +5,8 @@ __pycache__/
 
 # C extensions
 *.so
-.venv
-instance
+.venv/*
+instance/*
 # Distribution / packaging
 instance/
 .Python
